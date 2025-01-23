@@ -1,4 +1,6 @@
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
+
+let blacklist = [];
 
 const jwtMiddleware = (req, res, next) => {
     const authHeader = req.headers['authorization'];
@@ -15,4 +17,4 @@ const jwtMiddleware = (req, res, next) => {
     });
 };
 
-module.exports = jwtMiddleware;
+export default jwtMiddleware;
